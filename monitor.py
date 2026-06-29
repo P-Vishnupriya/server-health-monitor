@@ -2,13 +2,15 @@ import psutil
 from config import CPU_THRESHOLD, MEMORY_THRESHOLD, DISK_THRESHOLD 
 from logger import logger
 from process_monitor import check_process
+from logger import logger
+from database import save_data
  
 print("===== Server Health Monitor =====")
  
 cpu = psutil.cpu_percent(interval=1)
 memory = psutil.virtual_memory().percent
 disk = psutil.disk_usage('/').percent
-from logger import logger
+save_data(cpu, memory, disk)
  
 logger.info(f"CPU: {cpu}%")
 logger.info(f"Memory: {memory}%")
