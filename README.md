@@ -1,90 +1,110 @@
-System Health Monitoring Project
+# Server Health Monitoring & Alert System
  
-Overview
-This is a Python-based system health monitoring project that tracks CPU, Memory, and Disk usage.  
-It stores data in a SQLite database, generates logs, and creates CSV reports for analysis.
+## Project Overview
  
-This project demonstrates basic DevOps monitoring concepts.
+This project is a Python-based Server Health Monitoring Tool developed for DevOps Automation. It monitors system resources, logs server health, stores historical data in a SQLite database, generates CSV reports, and runs automatically using a scheduler.
  
 ---
  
-Features
-- CPU usage monitoring
-- Memory usage monitoring
-- Disk usage monitoring
-- Process monitoring
-- Logging system (monitor.log)
-- Configurable thresholds
-- Automatic scheduler
-- SQLite database storage (health_monitor.db)
-- CSV report generation (health_report.csv)
-- Modular Python design
+## Features
+ 
+- CPU Monitoring
+- Memory Monitoring
+- Disk Monitoring
+- Process Monitoring
+- Logging
+- Configurable Thresholds
+- Automatic Scheduler
+- SQLite Database Storage
+- CSV Report Generation
+- Git & GitHub Integration
  
 ---
  
-Tech Stack
-- Python 3
+## Technologies Used
+ 
+- Python
+- SQLite
+- Git
+- GitHub
+- VS Code
+ 
+Python Libraries:
 - psutil
-- SQLite3
-- CSV module
-- Logging module
-- Git & GitHub
+- schedule
+- sqlite3
+- csv
+- logging
  
 ---
  
-Project Structure
+## Project Structure
  
-monitor.py
-database.py
-report.py
-view_db.py
-health_monitor.db
-health_report.csv
-monitor.log
-README.md
+```
+server-health-monitor/
+│
+├── monitor.py
+├── process_monitor.py
+├── config.py
+├── logger.py
+├── scheduler.py
+├── database.py
+├── report.py
+├── email_alert.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── monitor.log
+├── health_monitor.db
+└── health_report.csv
+```
  
 ---
-How to Run the Project
  
-1. Install dependencies
-pip install psutil
+## How to Run
  
-2. Create database
-python database.py
-3. Start system monitoring
-python monitor.py
-4. Generate CSV report
-python report.py
+Install dependencies:
  
+```
+py -m pip install -r requirements.txt
+```
  
+Run the monitor:
  
-Output Files
+```
+py monitor.py
+```
  
-- monitor.log. //Logs system activity
-- health_monitor.db  //Stores historical system data
-- health_report.csv  //Exported report for analysis
+Run automatically:
  
+```
+py scheduler.py
+```
  
+Generate CSV report:
  
-Learning Outcome
+```
+py report.py
+```
  
-This project helps to understand:
+---
  
-- System monitoring concepts
-- Data logging and persistence
-- Database integration with Python
-- Automation using schedulers
-- Report generation
-- Git version control workflow
+## Output
  
+The project:
  
+- Monitors CPU, Memory and Disk usage.
+- Checks important running processes.
+- Logs system health.
+- Stores monitoring history in SQLite.
+- Generates CSV reports.
+- Supports Git version control.
  
-Future Improvements
+---
  
-- Email/Slack alerts for high CPU usage
-- Docker containerization
+## Future Enhancements
  
+- Docker Support
+- Email Alerts
+
  
- 
-Author
-Vishnupriya P
