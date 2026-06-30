@@ -1,4 +1,4 @@
-# Server Health Monitoring & Alert System
+# Server Health Monitoring System
  
 ## Project Overview
  
